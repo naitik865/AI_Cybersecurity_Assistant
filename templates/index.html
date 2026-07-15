@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI-Based Personal Cybersecurity Assistant for real-time URL threat detection using Machine Learning and Explainable AI.">
+    <title>AI-Based Cybersecurity Assistant - Threat Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1 class="title" id="app-main-title">
+                AI Cybersecurity Assistant
+            </h1>
+            <p class="subtitle" id="app-subtitle">
+                Real-time threat detection using Machine Learning and Explainable AI
+            </p>
+        </header>
+
+        <section class="card" id="input-card">
+            <form action="/predict" method="POST" id="analysis-form">
+                <div class="form-group">
+                    <input type="text" 
+                           id="url-input-field"
+                           name="url" 
+                           placeholder="Enter suspicious URL (e.g., example.com)..." 
+                           required 
+                           aria-label="URL to analyze">
+                </div>
+                <button type="submit" id="analyze-submit-btn">
+                    Analyze Threat Level
+                </button>
+            </form>
+        </section>
+        
+        <footer class="footer" id="app-footer">
+            Powered by Random Forest Classifier &amp; Explainable Heuristics
+        </footer>
+    </main>
+</body>
+</html>
